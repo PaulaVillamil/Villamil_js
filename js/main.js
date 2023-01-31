@@ -1,29 +1,26 @@
-let nombre;
-let correo;
-let comprueba=Nan;
-let cantidadPiezas;
-let precioFinal;
-let datosPago;
+let nombre = prompt ("Ingrese su nombre")
+let correo = prompt ("ingrese su correo elctrónico")
+console.log (nombre + correo)
 
-nombre= (prompt("Ingrese su nombre"))
+let cantidadPiezas = prompt ("Ingrese la cantidad de piezas que desea reservar")
+console.log (cantidadPiezas)
 
-if (nombre==comprueba) 
-    
-{correo= (prompt ("Ingrese su correo"))}
-else 
-{nombre= (prompt("Ingrese su nombre"))};
+if (cantidadPiezas == 0)
+{
+    alert ("Ingrese un número mayor a 0");
+    cantidadPiezas = prompt ("Ingrese la cantidad de piezas que desea reservar");
+};
 
-//correo= (prompt ("Ingrese su correo"))
+while (cantidadPiezas > 0 )
+{
+    if (cantidadPiezas <= 5)
+    {
+        alert ("El precio final de su compra es de " + (cantidadPiezas*180));
+    }
+    else {
+        alert ("El precio final de su compra es de " + (cantidadPiezas*160));
+    }
+    break;
 
-//cantidadPiezas = parseInt (prompt (nombre + ", ¿cuántas piezas desea reservar?"))
+};
 
-//let esNum = Number; 
-//if (esNum) 
-//{true} else {false};
-
-//if (cantidadPiezas) {
-   // Nan;
-    //} alert (nombre+", por favor, ingresa un número");
-
-
-//alert (nombre + ", estas a punto de reservar " + cantidadPiezas + " piezas para el próximo taller")
