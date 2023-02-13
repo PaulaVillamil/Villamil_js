@@ -30,6 +30,26 @@ function menu() {
     return opcion;
 }
 
+let opcion = menu(); 
+
+switch(opcion) {
+    case 1: 
+        workshops();
+        break;
+    case 2: 
+        kids();
+        break;
+    case 3: 
+        teamBuilding();
+        break;
+    case 4:
+        otros();
+        break;
+    default: 
+        alert("Por favor ingresa un número del 1 al 4")
+        break;
+}
+
 function workshops() {
     nombre = prompt("Ingresa tu nombre y apellido");
     correo = prompt ("Ingresa tu correo elctrónico");
@@ -96,7 +116,7 @@ function teamBuilding () {
 function otros () {
     nombre = prompt("Ingresa tu nombre y apellido");
     correo = prompt ("Ingresa tu correo elctrónico");
-    cantidadPiezas = prompt ("Ingress la cantidad de piezas que desea reservar")
+    cantidadPiezas = prompt ("Ingresa la cantidad de piezas que desea reservar")
     usuario = new Usuario(nombre, correo, cantidadPiezas, 4);
     arrayUsuarios.push(usuario);
     console.log(arrayUsuarios);
@@ -114,23 +134,3 @@ function otros () {
 }
 
 console.log (cantidadPiezas)
-
-let opcion = menu(); 
-
-switch(opcion) {
-    case 1: 
-        workshops();
-        break;
-    case 2: 
-        kids();
-        break;
-    case 3: 
-        teamBuilding();
-        break;
-    case 4:
-        otros();
-        break;
-    default: 
-        alert("Por favor ingresa un número del 1 al 4")
-        break;
-}
